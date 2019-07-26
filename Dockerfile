@@ -2,6 +2,8 @@ FROM debian:buster-slim
 
 RUN apt-get update
 
+RUN apt-get upgrade -y
+
 RUN apt-get install -y git cmake g++ gcc cmake libboost-dev
 
 RUN cd /tmp && git clone https://github.com/ohwgiles/laminar.git
@@ -19,7 +21,7 @@ RUN apt-get purge -y cmake g++ gcc libboost-dev libsqlite3-dev rapidjson-dev zli
 
 RUN apt-get autoremove -y
 
-RUN apt-get install -y openssh-server
+RUN apt-get install -y openssh-server cron
 
 RUN apt-get clean
 

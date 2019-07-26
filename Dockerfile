@@ -25,9 +25,13 @@ RUN apt-get clean
 
 RUN rm -rf /tmp/laminar
 
-EXPOSE 8080
+ADD authorized_keys /authorized_keys
 
-ENTRYPOINT ["/usr/bin/laminard"]
+ADD start.sh /start.sh
+
+EXPOSE 22 8080
+
+ENTRYPOINT ["/start.sh"]
 
 
 

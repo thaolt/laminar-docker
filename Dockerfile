@@ -1,5 +1,5 @@
-FROM debian:buster:slim
+FROM debian:buster-slim
 
-RUN apt-update
+RUN apt-get update
 
 

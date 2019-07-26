@@ -21,7 +21,7 @@ RUN apt-get purge -y cmake g++ gcc libboost-dev libsqlite3-dev rapidjson-dev zli
 
 RUN apt-get autoremove -y
 
-RUN apt-get install -y openssh-server cron
+RUN apt-get install -y openssh-server cron netcat
 
 RUN apt-get clean
 

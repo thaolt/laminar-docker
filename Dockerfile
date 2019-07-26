@@ -29,6 +29,8 @@ RUN rm -rf /tmp/laminar
 
 ADD authorized_keys /authorized_keys
 
+ADD heroku_start.sh /heroku_start.sh
+
 ADD start.sh /start.sh
 
 EXPOSE 22 8080
